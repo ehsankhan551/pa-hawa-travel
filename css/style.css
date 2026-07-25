@@ -42,7 +42,7 @@ ul { list-style: none; }
 .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; display: flex; align-items: center; gap: 8px; color: var(--navy); }
 .nav-logo span.gold { color: var(--gold); }
-.nav-links { display: flex; gap: 26px; align-items: center; font-weight: 500; font-size: 0.95rem; }
+.nav-links { display: flex; gap: 16px 18px; align-items: center; font-weight: 500; font-size: 0.88rem; flex-wrap: wrap; justify-content: flex-end; }
 .nav-links a { position: relative; padding: 6px 2px; transition: color 0.2s; }
 .nav-links a:hover { color: var(--sky); }
 .nav-links a.active { color: var(--sky); font-weight: 700; }
@@ -139,3 +139,53 @@ footer { background: var(--navy); color: #cfd8e6; padding: 50px 0 24px; margin-t
 
 /* ---------- Dev note ---------- */
 .dev-note { background: #FFF3CD; color: #664d03; text-align: center; font-size: 0.82rem; padding: 8px 16px; }
+
+/* ---------- Lang toggle ---------- */
+.lang-toggle { font-size: 0.85rem; font-weight: 700; padding: 6px 14px; border: 1.5px solid currentColor; border-radius: 999px; }
+
+/* ---------- Search bar (tab style, homepage hero) ---------- */
+.search-card { background: #fff; border-radius: var(--radius); box-shadow: 0 20px 50px rgba(0,0,0,0.25); padding: 10px; max-width: 940px; margin: 0 auto; text-align: left; }
+.search-tabs { display: flex; gap: 4px; flex-wrap: wrap; padding: 6px 6px 0; }
+.search-tab { display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 10px 10px 0 0; font-weight: 700; font-size: 0.9rem; color: #667; cursor: pointer; background: none; border: none; font-family: inherit; }
+.search-tab i { color: var(--sky); }
+.search-tab.active { background: #eef4ff; color: var(--navy); }
+.search-panel { display: none; padding: 18px 16px; }
+.search-panel.active { display: block; }
+.search-fields { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; align-items: end; }
+@media (max-width: 760px) { .search-fields { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .search-fields { grid-template-columns: 1fr; } }
+.search-field label { display: block; font-size: 0.78rem; font-weight: 700; color: #778; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+.search-field input, .search-field select { width: 100%; padding: 11px 12px; border: 1.5px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 0.92rem; color: var(--text-dark); }
+.search-triptype { display: flex; gap: 18px; margin-bottom: 12px; font-size: 0.85rem; font-weight: 600; color: #556; }
+.search-triptype label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.search-submit { grid-column: -1 / -1; }
+@media (max-width: 760px) { .search-submit { grid-column: auto; } }
+.search-submit button { width: 100%; background: var(--sky); color: #fff; border: none; padding: 13px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.search-submit button:hover { background: var(--navy); }
+.search-note { font-size: 0.75rem; color: #99a; text-align: center; margin-top: 10px; }
+
+/* ---------- Destinations / trending routes ---------- */
+.dest-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 900px) { .dest-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 620px) { .dest-grid { grid-template-columns: 1fr 1fr; } }
+.dest-pill { background: #fff; border-radius: 10px; box-shadow: var(--shadow); padding: 16px 18px; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px; transition: transform .15s ease; }
+.dest-pill:hover { transform: translateY(-3px); color: var(--sky); }
+.dest-pill i { color: var(--gold); }
+
+/* ===========================================================
+   RTL support (Arabic pages) — add dir="rtl" lang="ar" to <html>
+   =========================================================== */
+html[dir="rtl"] body { font-family: 'Tahoma', 'Poppins', sans-serif; }
+html[dir="rtl"] .nav-links { text-align: right; }
+html[dir="rtl"] .nav-links.open { text-align: right; }
+html[dir="rtl"] .contact-info .row i,
+html[dir="rtl"] .location-info .row i { margin-top: 4px; }
+html[dir="rtl"] .search-tab i,
+html[dir="rtl"] .card i,
+html[dir="rtl"] .dest-pill i { margin-left: 0; }
+html[dir="rtl"] .route-item, html[dir="rtl"] .package-item, html[dir="rtl"] .menu-item {
+  flex-direction: row-reverse;
+}
+html[dir="rtl"] .btn-row, html[dir="rtl"] .quick-contact, html[dir="rtl"] .search-triptype { direction: rtl; }
+html[dir="rtl"] .footer-grid { text-align: right; }
+html[dir="rtl"] .card, html[dir="rtl"] .contact-info, html[dir="rtl"] .location-info { text-align: right; }
