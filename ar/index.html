@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>با هوا للسفر والسياحة | طيران، فنادق، أنشطة، تنقلات والمزيد</title>
+<meta name="description" content="با هوا للسفر والسياحة — تذاكر طيران، فنادق، أنشطة، تأجير سيارات، تنقلات المطار، باقات عمرة وحج، ومساعدة في التأشيرات.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="dev-note">🚧 محتوى تجريبي — استبدل المسارات والأسعار وبيانات التواصل والصور بمعلوماتك الحقيقية.</div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">PA <span class="gold">HAWA</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="services/flights.html">الطيران</a>
+      <a href="services/hotels.html">الفنادق</a>
+      <a href="services/activities.html">الأنشطة</a>
+      <a href="services/car-rental.html">تأجير السيارات</a>
+      <a href="services/airport-transfers.html">التنقلات</a>
+      <a href="services/umrah-hajj.html">العمرة والحج</a>
+      <a href="services/visa.html">التأشيرات</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="about.html">من نحن</a>
+      <a href="../index.html" class="lang-toggle">English</a>
+    </div>
+    <button class="nav-toggle" aria-label="القائمة"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">با هوا — "في الجو"</div>
+    <h1>رحلتك، محجوزة بثقة</h1>
+    <p>طيران، فنادق، أنشطة، تأجير سيارات، تنقلات المطار، باقات عمرة وحج، ومساعدة في التأشيرات — وكيل سفر موثوق يتابع حجزك بنفسه من البداية للنهاية.</p>
+
+    <div class="search-card">
+      <div class="search-tabs">
+        <button class="search-tab active" data-target="panel-flights" type="button"><i class="fa-solid fa-plane"></i> طيران</button>
+        <button class="search-tab" data-target="panel-hotels" type="button"><i class="fa-solid fa-hotel"></i> فنادق</button>
+        <button class="search-tab" data-target="panel-activities" type="button"><i class="fa-solid fa-ticket"></i> أنشطة</button>
+        <button class="search-tab" data-target="panel-transfers" type="button"><i class="fa-solid fa-van-shuttle"></i> تنقلات</button>
+        <button class="search-tab" data-target="panel-cars" type="button"><i class="fa-solid fa-car"></i> تأجير سيارات</button>
+      </div>
+
+      <div class="search-panel active" id="panel-flights" data-tab-name="طيران" data-greeting="مرحباً با هوا، أرغب بعرض سعر لتذكرة طيران:">
+        <div class="search-triptype">
+          <label><input type="radio" name="triptype" checked> ذهاب فقط</label>
+          <label><input type="radio" name="triptype"> ذهاب وعودة</label>
+        </div>
+        <div class="search-fields">
+          <div class="search-field"><label>من</label><input type="text" placeholder="مثال: الرياض (RUH)" data-label="من"></div>
+          <div class="search-field"><label>إلى</label><input type="text" placeholder="مثال: بيشاور (PEW)" data-label="إلى"></div>
+          <div class="search-field"><label>تاريخ السفر</label><input type="date" data-label="تاريخ السفر"></div>
+          <div class="search-field"><label>عدد المسافرين</label><input type="number" min="1" value="1" data-label="عدد المسافرين"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> بحث</button></div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="panel-hotels" data-tab-name="فنادق" data-greeting="مرحباً با هوا، أرغب بعرض سعر لحجز فندق:">
+        <div class="search-fields">
+          <div class="search-field"><label>المدينة</label><input type="text" placeholder="مثال: مكة المكرمة" data-label="المدينة"></div>
+          <div class="search-field"><label>تاريخ الوصول</label><input type="date" data-label="تاريخ الوصول"></div>
+          <div class="search-field"><label>تاريخ المغادرة</label><input type="date" data-label="تاريخ المغادرة"></div>
+          <div class="search-field"><label>عدد النزلاء</label><input type="number" min="1" value="2" data-label="عدد النزلاء"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> بحث</button></div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="panel-activities" data-tab-name="أنشطة" data-greeting="مرحباً با هوا، أرغب بمعلومات عن نشاط سياحي:">
+        <div class="search-fields">
+          <div class="search-field"><label>المدينة</label><input type="text" placeholder="مثال: الرياض" data-label="المدينة"></div>
+          <div class="search-field"><label>التاريخ</label><input type="date" data-label="التاريخ"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> بحث</button></div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="panel-transfers" data-tab-name="تنقلات المطار" data-greeting="مرحباً با هوا، أحتاج خدمة نقل من/إلى المطار:">
+        <div class="search-fields">
+          <div class="search-field"><label>من</label><input type="text" placeholder="مثال: مطار جدة" data-label="من"></div>
+          <div class="search-field"><label>إلى</label><input type="text" placeholder="مثال: فندق في مكة" data-label="إلى"></div>
+          <div class="search-field"><label>التاريخ</label><input type="date" data-label="التاريخ"></div>
+          <div class="search-field"><label>الوقت</label><input type="time" data-label="الوقت"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> بحث</button></div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="panel-cars" data-tab-name="تأجير سيارات" data-greeting="مرحباً با هوا، أرغب بعرض سعر لتأجير سيارة:">
+        <div class="search-fields">
+          <div class="search-field"><label>المدينة</label><input type="text" placeholder="مثال: الرياض" data-label="المدينة"></div>
+          <div class="search-field"><label>تاريخ الاستلام</label><input type="date" data-label="تاريخ الاستلام"></div>
+          <div class="search-field"><label>تاريخ الإرجاع</label><input type="date" data-label="تاريخ الإرجاع"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> بحث</button></div>
+        </div>
+      </div>
+      <p class="search-note">هذا ليس بحثاً مباشراً — سنرد عليك بالأسعار الفعلية عبر واتساب بعد الإرسال مباشرة.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">خدماتنا</div>
+      <h2>كل ما تحتاجه لرحلتك في مكان واحد</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <i class="fa-solid fa-plane"></i>
+        <h4>تذاكر الطيران</h4>
+        <p>رحلات داخلية ودولية — السعودية، باكستان، وأكثر.</p>
+        <a href="services/flights.html">عرض المسارات &larr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-hotel"></i>
+        <h4>حجز الفنادق</h4>
+        <p>فنادق في مكة والمدينة والمدن الرئيسية بأسعار الوكلاء.</p>
+        <a href="services/hotels.html">تصفح الفنادق &larr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-ticket"></i>
+        <h4>الأنشطة والجولات</h4>
+        <p>رحلات يومية، جولات في المدينة، ومغامرات صحراوية.</p>
+        <a href="services/activities.html">عرض الأنشطة &larr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-car"></i>
+        <h4>تأجير السيارات</h4>
+        <p>من الاقتصادية إلى الدفع الرباعي، بقيادتك أو بسائق خاص.</p>
+        <a href="services/car-rental.html">عرض الأسعار &larr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-van-shuttle"></i>
+        <h4>تنقلات المطار</h4>
+        <p>استقبال وتوصيل خاص، دون الانتظار في طوابير التاكسي.</p>
+        <a href="services/airport-transfers.html">احجز تنقلة &larr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-kaaba"></i>
+        <h4>العمرة والحج</h4>
+        <p>باقات متكاملة تشمل الطيران والتأشيرة والفندق والتنقلات.</p>
+        <a href="services/umrah-hajj.html">عرض الباقات &larr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-passport"></i>
+        <h4>مساعدة التأشيرات</h4>
+        <p>إرشاد ومتابعة لتأشيرات السياحة والعمل والزيارة العائلية.</p>
+        <a href="services/visa.html">اعرف المزيد &larr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">أشهر المسارات</div>
+      <h2>رحلات ووجهات رائجة</h2>
+    </div>
+    <div class="dest-grid">
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> الرياض &larr; بيشاور</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> جدة &larr; إسلام آباد</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> الرياض &larr; لاهور</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> الدمام &larr; كراتشي</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> الرياض &larr; دبي</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> جدة &larr; القاهرة</a>
+      <a class="dest-pill" href="services/umrah-hajj.html"><i class="fa-solid fa-kaaba"></i> باقات العمرة</a>
+      <a class="dest-pill" href="services/hotels.html"><i class="fa-solid fa-hotel"></i> فنادق مكة</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">كيف يتم الحجز</div>
+      <h2>الحجز مع با هوا بسيط جداً</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>أخبرنا بخطتك</h4><p>أرسل لنا المسار والتواريخ أو الباقة التي تهمك.</p></div>
+      <div class="step"><div class="num">2</div><h4>احصل على عرض سعر</h4><p>نتحقق من الأسعار الحالية ونرسل لك أفضل عرض.</p></div>
+      <div class="step"><div class="num">3</div><h4>أكّد وادفع</h4><p>وافق على الحجز وأكمل الدفع بأمان.</p></div>
+      <div class="step"><div class="num">4</div><h4>حان وقت السفر!</h4><p>استلم تذكرتك الإلكترونية ومستنداتك عبر البريد/واتساب.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" style="text-align:center;">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">تواصل معنا فوراً</div>
+      <h2>لديك سؤال عن رحلتك؟ اسأل الآن</h2>
+    </div>
+    <div class="quick-contact">
+      <a href="https://wa.me/9665XXXXXXXX" class="whatsapp"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+      <a href="tel:+9665XXXXXXXX" class="call"><i class="fa-solid fa-phone"></i> اتصل الآن</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> أرسل استفسار</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h5>با هوا للسفر والسياحة</h5>
+      <p style="font-size:0.9rem; color:#9fb0c8; max-width:320px;">طيران، فنادق، أنشطة، تأجير سيارات، تنقلات المطار، عمرة وحج، ومساعدة تأشيرات — متابعة شخصية بالكامل.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://wa.me/9665XXXXXXXX"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>الخدمات</h5>
+      <ul>
+        <li><a href="services/flights.html">الطيران</a></li>
+        <li><a href="services/hotels.html">الفنادق</a></li>
+        <li><a href="services/activities.html">الأنشطة</a></li>
+        <li><a href="services/car-rental.html">تأجير السيارات</a></li>
+        <li><a href="services/airport-transfers.html">تنقلات المطار</a></li>
+        <li><a href="services/umrah-hajj.html">العمرة والحج</a></li>
+        <li><a href="services/visa.html">التأشيرات</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>الشركة</h5>
+      <ul>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>التواصل</h5>
+      <ul>
+        <li><i class="fa-solid fa-phone"></i> ‎+966 5X XXX XXXX</li>
+        <li><i class="fa-solid fa-envelope"></i> info@pahawatravel.example</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    &copy; <span id="year"></span> با هوا للسفر والسياحة. جميع الحقوق محفوظة. موقع تجريبي — استبدله ببيانات عملك الحقيقية.
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/script.js"></script>
+</body>
+</html>
