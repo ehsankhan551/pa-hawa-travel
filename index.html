@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pa Hawa Travel & Tours | Flights, Umrah, Visa & Hotels</title>
-<meta name="description" content="Pa Hawa Travel & Tours — flight tickets, Umrah & Hajj packages, visa assistance, and hotel bookings.">
+<title>Pa Hawa Travel & Tours | Flights, Hotels, Activities, Transfers & More</title>
+<meta name="description" content="Pa Hawa Travel & Tours — flight tickets, hotels, activities, car rental, airport transfers, Umrah & Hajj packages, and visa assistance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -20,11 +20,15 @@
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="services/flights.html">Flights</a>
+      <a href="services/hotels.html">Hotels</a>
+      <a href="services/activities.html">Activities</a>
+      <a href="services/car-rental.html">Car Rental</a>
+      <a href="services/airport-transfers.html">Transfers</a>
       <a href="services/umrah-hajj.html">Umrah & Hajj</a>
       <a href="services/visa.html">Visa</a>
-      <a href="services/hotels.html">Hotels</a>
       <a href="contact.html">Contact</a>
       <a href="about.html">About</a>
+      <a href="ar/index.html" class="lang-toggle">العربية</a>
     </div>
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -34,10 +38,68 @@
   <div class="container">
     <div class="hero-eyebrow">Pa Hawa — "In the Air"</div>
     <h1>Your Journey, Booked Right</h1>
-    <p>Flight tickets, Umrah & Hajj packages, visa assistance, and hotel bookings — one trusted travel agent, handled personally from start to finish.</p>
-    <div class="btn-row">
-      <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
-      <a href="https://wa.me/9665XXXXXXXX" class="btn btn-outline" style="color:#fff;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+    <p>Flights, hotels, activities, car rental, airport transfers, Umrah & Hajj packages, and visa assistance — one trusted travel agent, handled personally from start to finish.</p>
+
+    <div class="search-card">
+      <div class="search-tabs">
+        <button class="search-tab active" data-target="panel-flights" type="button"><i class="fa-solid fa-plane"></i> Flights</button>
+        <button class="search-tab" data-target="panel-hotels" type="button"><i class="fa-solid fa-hotel"></i> Hotels</button>
+        <button class="search-tab" data-target="panel-activities" type="button"><i class="fa-solid fa-ticket"></i> Activities</button>
+        <button class="search-tab" data-target="panel-transfers" type="button"><i class="fa-solid fa-van-shuttle"></i> Transfers</button>
+        <button class="search-tab" data-target="panel-cars" type="button"><i class="fa-solid fa-car"></i> Car Rental</button>
+      </div>
+
+      <div class="search-panel active" id="panel-flights" data-tab-name="Flights" data-greeting="Hi Pa Hawa, I'd like a flight quote:">
+        <div class="search-triptype">
+          <label><input type="radio" name="triptype" checked> One Way</label>
+          <label><input type="radio" name="triptype"> Round Trip</label>
+        </div>
+        <div class="search-fields">
+          <div class="search-field"><label>From</label><input type="text" placeholder="e.g. Riyadh (RUH)" data-label="From"></div>
+          <div class="search-field"><label>To</label><input type="text" placeholder="e.g. Peshawar (PEW)" data-label="To"></div>
+          <div class="search-field"><label>Departure</label><input type="date" data-label="Departure"></div>
+          <div class="search-field"><label>Passengers</label><input type="number" min="1" value="1" data-label="Passengers"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> Search</button></div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="panel-hotels" data-tab-name="Hotels" data-greeting="Hi Pa Hawa, I'd like a hotel quote:">
+        <div class="search-fields">
+          <div class="search-field"><label>City</label><input type="text" placeholder="e.g. Makkah" data-label="City"></div>
+          <div class="search-field"><label>Check-in</label><input type="date" data-label="Check-in"></div>
+          <div class="search-field"><label>Check-out</label><input type="date" data-label="Check-out"></div>
+          <div class="search-field"><label>Guests</label><input type="number" min="1" value="2" data-label="Guests"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> Search</button></div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="panel-activities" data-tab-name="Activities" data-greeting="Hi Pa Hawa, I'd like info about an activity:">
+        <div class="search-fields">
+          <div class="search-field"><label>City</label><input type="text" placeholder="e.g. Riyadh" data-label="City"></div>
+          <div class="search-field"><label>Date</label><input type="date" data-label="Date"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> Search</button></div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="panel-transfers" data-tab-name="Airport Transfer" data-greeting="Hi Pa Hawa, I need an airport transfer:">
+        <div class="search-fields">
+          <div class="search-field"><label>From</label><input type="text" placeholder="e.g. Jeddah Airport" data-label="From"></div>
+          <div class="search-field"><label>To</label><input type="text" placeholder="e.g. Makkah Hotel" data-label="To"></div>
+          <div class="search-field"><label>Date</label><input type="date" data-label="Date"></div>
+          <div class="search-field"><label>Time</label><input type="time" data-label="Time"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> Search</button></div>
+        </div>
+      </div>
+
+      <div class="search-panel" id="panel-cars" data-tab-name="Car Rental" data-greeting="Hi Pa Hawa, I'd like a car rental quote:">
+        <div class="search-fields">
+          <div class="search-field"><label>City</label><input type="text" placeholder="e.g. Riyadh" data-label="City"></div>
+          <div class="search-field"><label>Pickup Date</label><input type="date" data-label="Pickup Date"></div>
+          <div class="search-field"><label>Return Date</label><input type="date" data-label="Return Date"></div>
+          <div class="search-field search-submit"><button class="search-go" type="button"><i class="fa-solid fa-magnifying-glass"></i> Search</button></div>
+        </div>
+      </div>
+      <p class="search-note">Not a live search — we'll reply with real prices via WhatsApp shortly after you submit.</p>
     </div>
   </div>
 </header>
@@ -56,6 +118,30 @@
         <a href="services/flights.html">View routes &rarr;</a>
       </div>
       <div class="card">
+        <i class="fa-solid fa-hotel"></i>
+        <h4>Hotel Booking</h4>
+        <p>Hotels in Makkah, Madinah, and major cities at agent rates.</p>
+        <a href="services/hotels.html">Browse hotels &rarr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-ticket"></i>
+        <h4>Activities & Tours</h4>
+        <p>Day trips, city tours, and desert adventures.</p>
+        <a href="services/activities.html">See activities &rarr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-car"></i>
+        <h4>Car Rental</h4>
+        <p>Economy to SUV, self-drive or chauffeur-driven.</p>
+        <a href="services/car-rental.html">View rates &rarr;</a>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-van-shuttle"></i>
+        <h4>Airport Transfers</h4>
+        <p>Private pickup and drop-off, no taxi lines.</p>
+        <a href="services/airport-transfers.html">Book a transfer &rarr;</a>
+      </div>
+      <div class="card">
         <i class="fa-solid fa-kaaba"></i>
         <h4>Umrah & Hajj</h4>
         <p>Complete packages including flights, visa, hotel and transport.</p>
@@ -67,17 +153,30 @@
         <p>Guidance and processing support for tourist, work and family visas.</p>
         <a href="services/visa.html">Learn more &rarr;</a>
       </div>
-      <div class="card">
-        <i class="fa-solid fa-hotel"></i>
-        <h4>Hotel Booking</h4>
-        <p>Hotels in Makkah, Madinah, and major cities at agent rates.</p>
-        <a href="services/hotels.html">Browse hotels &rarr;</a>
-      </div>
     </div>
   </div>
 </section>
 
 <section class="section section-alt">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow">Popular Routes</div>
+      <h2>Trending flights & destinations</h2>
+    </div>
+    <div class="dest-grid">
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> Riyadh &rarr; Peshawar</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> Jeddah &rarr; Islamabad</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> Riyadh &rarr; Lahore</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> Dammam &rarr; Karachi</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> Riyadh &rarr; Dubai</a>
+      <a class="dest-pill" href="services/flights.html"><i class="fa-solid fa-plane-departure"></i> Jeddah &rarr; Cairo</a>
+      <a class="dest-pill" href="services/umrah-hajj.html"><i class="fa-solid fa-kaaba"></i> Umrah Packages</a>
+      <a class="dest-pill" href="services/hotels.html"><i class="fa-solid fa-hotel"></i> Makkah Hotels</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container">
     <div class="section-title">
       <div class="eyebrow">How It Works</div>
@@ -92,7 +191,7 @@
   </div>
 </section>
 
-<section class="section" style="text-align:center;">
+<section class="section section-alt" style="text-align:center;">
   <div class="container">
     <div class="section-title">
       <div class="eyebrow">Reach Us Instantly</div>
@@ -110,7 +209,7 @@
   <div class="container footer-grid">
     <div>
       <h5>PA HAWA TRAVEL & TOURS</h5>
-      <p style="font-size:0.9rem; color:#9fb0c8; max-width:320px;">Flights, Umrah & Hajj, visa assistance, and hotel bookings — handled personally.</p>
+      <p style="font-size:0.9rem; color:#9fb0c8; max-width:320px;">Flights, hotels, activities, car rental, airport transfers, Umrah & Hajj, and visa assistance — handled personally.</p>
       <div class="footer-social">
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -121,9 +220,12 @@
       <h5>SERVICES</h5>
       <ul>
         <li><a href="services/flights.html">Flights</a></li>
+        <li><a href="services/hotels.html">Hotels</a></li>
+        <li><a href="services/activities.html">Activities</a></li>
+        <li><a href="services/car-rental.html">Car Rental</a></li>
+        <li><a href="services/airport-transfers.html">Airport Transfers</a></li>
         <li><a href="services/umrah-hajj.html">Umrah & Hajj</a></li>
         <li><a href="services/visa.html">Visa</a></li>
-        <li><a href="services/hotels.html">Hotels</a></li>
       </ul>
     </div>
     <div>
