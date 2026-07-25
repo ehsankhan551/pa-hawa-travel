@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Inquiry | Pa Hawa Travel & Tours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dev-note">🚧 Sample phone/email/address — replace with your real details. The form opens the visitor's email app (no server needed) — update the address in js/script.js.</div>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">PA <span class="gold">HAWA</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services/flights.html">Flights</a>
+      <a href="services/umrah-hajj.html">Umrah & Hajj</a>
+      <a href="services/visa.html">Visa</a>
+      <a href="services/hotels.html">Hotels</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">We're Here to Help</div>
+    <h1>Contact Pa Hawa</h1>
+    <p>Message us on WhatsApp for the fastest reply, call directly, or send an inquiry below.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Get in touch</h3>
+        <div class="row"><i class="fa-solid fa-phone"></i><div>+966 5X XXX XXXX</div></div>
+        <div class="row"><i class="fa-brands fa-whatsapp"></i><div>+966 5X XXX XXXX (WhatsApp)</div></div>
+        <div class="row"><i class="fa-solid fa-envelope"></i><div>info@pahawatravel.example</div></div>
+        <div class="row"><i class="fa-solid fa-location-dot"></i><div>Riyadh, Saudi Arabia<br><em>(replace with real office address, or remove if you work without a walk-in office)</em></div></div>
+        <div class="row"><i class="fa-solid fa-clock"></i><div>Sun–Thu: 9:00 AM – 9:00 PM</div></div>
+        <iframe src="https://www.google.com/maps?q=Riyadh%2C%20Saudi%20Arabia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <form class="inquiry-form" id="inquiry-form">
+        <label for="inq-name">Full Name</label>
+        <input type="text" id="inq-name" required placeholder="Your full name">
+
+        <label for="inq-phone">Phone / WhatsApp</label>
+        <input type="tel" id="inq-phone" required placeholder="+966 5X XXX XXXX">
+
+        <label for="inq-service">Service Needed</label>
+        <select id="inq-service" required>
+          <option value="Flight Ticket">Flight Ticket</option>
+          <option value="Umrah/Hajj Package">Umrah/Hajj Package</option>
+          <option value="Visa Assistance">Visa Assistance</option>
+          <option value="Hotel Booking">Hotel Booking</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="inq-details">Details (route, dates, number of travelers)</label>
+        <textarea id="inq-details" placeholder="e.g. Riyadh to Peshawar, 12–20 August, 2 adults"></textarea>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h5>PA HAWA TRAVEL & TOURS</h5>
+      <p style="font-size:0.9rem; color:#9fb0c8; max-width:320px;">Flights, Umrah & Hajj, visa assistance, and hotel bookings — handled personally.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://wa.me/9665XXXXXXXX"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div>
+      <h5>SERVICES</h5>
+      <ul>
+        <li><a href="services/flights.html">Flights</a></li>
+        <li><a href="services/umrah-hajj.html">Umrah & Hajj</a></li>
+        <li><a href="services/visa.html">Visa</a></li>
+        <li><a href="services/hotels.html">Hotels</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>COMPANY</h5>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>CONTACT</h5>
+      <ul>
+        <li><i class="fa-solid fa-phone"></i> +966 5X XXX XXXX</li>
+        <li><i class="fa-solid fa-envelope"></i> info@pahawatravel.example</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    &copy; <span id="year"></span> Pa Hawa Travel & Tours. All rights reserved. Sample site — replace with real business details.
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/script.js"></script>
+</body>
+</html>
